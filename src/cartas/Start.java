@@ -9,6 +9,7 @@ public class Start {
 //		carta1.setPalo('C');
 
 //		baraja.rellenarBaraja();
+		System.out.println (baraja.darVuelta(2,'D'));
 		System.out.println(baraja);
 
 	}

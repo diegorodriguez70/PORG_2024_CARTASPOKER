@@ -3,7 +3,7 @@ package cartas;
 public class Cartas {
 	private char palo;
 	private char numero;
-	
+	private boolean vuelta=false;
 
 
 
@@ -28,9 +28,20 @@ public class Cartas {
 //		return (int) numero;
 //		
 //	}
+	
+	public void Vueltadada() {
+		vuelta=true;
 
+	}
+	
 	public String toString() {
-		return "\n(palo=" + palo + ", numero=" + numero + ")";
+		if (vuelta) {
+			return "\n(palo=" + palo + ", numero=" + numero + ")";
+		}
+		else {
+			return "\n(numero=" + numero + ", palo=" + palo + ")";
+		}
+		
 	}
 	
 	

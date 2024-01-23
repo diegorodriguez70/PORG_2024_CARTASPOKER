@@ -4,10 +4,12 @@ import java.util.Arrays;
 
 public class Baraja {
 	private Cartas baraja[];
+	private boolean encontrado=false;
 
 	public Baraja() {
 		baraja = new Cartas[52];
 		rellenarBaraja();
+
 	}
 
 	private void rellenarBaraja() {
@@ -31,11 +33,27 @@ public class Baraja {
 			
 			baraja[i] = cartaQueToca(j,palo) ;
 			j++;
-
+ 
 		}
 //		return Arrays.toString(baraja);
 	}
-
+	 
+	
+	public Cartas darVuelta(int numero, char palo) {
+		int i =0;
+		Cartas carta = new Cartas();
+		while(i<baraja.length&&!encontrado) {
+			if(i==numero) {
+				carta=cartaQueToca(numero, palo);
+				encontrado=true;
+			}
+			i++;
+		}
+		carta.Vueltadada();
+		return carta;
+		
+	}
+	
 	private Cartas cartaQueToca(int numero, char palo) {
 		
 		Cartas carta = new Cartas();
@@ -60,8 +78,7 @@ public class Baraja {
 		return carta;
 	}
 
-	
-	@Override
+
 	public String toString() {
 		return " [baraja=" + Arrays.toString(baraja) + "]";
 	}
