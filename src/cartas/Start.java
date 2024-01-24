@@ -9,7 +9,10 @@ public class Start {
 //		carta1.setPalo('C');
 
 //		baraja.rellenarBaraja();
-		System.out.println (baraja.darVuelta(2,'D'));
+		System.out.println ("Le has dado la vuelta a la carta "+baraja.darVuelta(2,'D'));
+		System.out.println ("Le has dado la vuelta a la carta "+baraja.darVuelta(3,'D'));
+		
+
 		System.out.println(baraja);
 
 	}
